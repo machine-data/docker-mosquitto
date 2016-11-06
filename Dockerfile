@@ -11,9 +11,8 @@ RUN set -xe \
     && apk add --no-cache --virtual .mosquitto \
         mosquitto=${MOSQUITTO_VERSION} \
         mosquitto-libs=${MOSQUITTO_VERSION} \
-        mosquitto-clients=${MOSQUITTO_VERSION}
-
-RUN set -xe \
+        mosquitto-clients=${MOSQUITTO_VERSION} \
+    \
     && mkdir /config /data \
     && cp /etc/mosquitto/mosquitto.conf /config/mosquitto.conf.dist \
     && chown -R mosquitto:mosquitto /data /config
