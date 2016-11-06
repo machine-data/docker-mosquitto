@@ -1,0 +1,23 @@
+docker-mosquitto
+Copyright 2016 Crate.io, Inc. ("Crate")
+
+This product includes software developed at:
+
+
+=========================================================================
+
+Dockerfile for eclipse mosquitto MQTT broker
+
+https://github.com/toke/docker-mosquitto
+
+developed by Thomas Kerpe <web@toke.de>
+with contributions from:
+- Andrea Pinazzi, https://github.com/onip
+- m0se, https://github.com/m0se
+- David Medinets, https://github.com/medined
+- Gavin de Kock, https://github.com/gavindekock
+- Raphael Ahrens, https://github.com/tantSinnister
+
+License: MIT, BSD-3-Clause
+
+=========================================================================
