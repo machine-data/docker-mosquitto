@@ -68,16 +68,19 @@ It is very easy to configure Mosquitto via environment variables. If no config f
 
 - `MOSQUITTO_LOG_DEST`: Change this from the default `stdout` if you like the logs being written to disk.
 
+- `MOSQUITTO_PERSISTENCE`: Save persistent message data to disk (true/false). Default: true
+
 - `MOSQUITTO_PERSISTENCE_LOCATION`: The directory where the in-memory database is being saved. This translates to `persistence_location` in `mosquitto.conf`. In most cases it makes sense to keep the `/data` default.
 
 ## Configuration file
 
 The container is configured to start Mosquitto with `/config/mosquitto.conf` as config file.
-If a config file is mounted (preferably read-only), the `MOSQUITTO_` environment variables will be ignored:
+If a config file (or the entire /config directory) is mounted (preferably read-only), the `MOSQUITTO_` environment variables will be ignored:
 
 ```sh
 $ curl -O https://raw.githubusercontent.com/eclipse/mosquitto/master/mosquitto.conf
 $ sed -e "s#log_dest syslog#log_dest stdout#" \
+      -e "s#\#persistence false#persistence true#" \
       -e "s#\#persistence_location#persistence_location /data#" \
 
 $ docker run -d \

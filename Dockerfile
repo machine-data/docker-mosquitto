@@ -17,7 +17,7 @@ RUN set -xe \
     && cp /etc/mosquitto/mosquitto.conf /config/mosquitto.conf.dist \
     && chown -R mosquitto:mosquitto /data /config
 
-VOLUME ["/data"]
+VOLUME ["/config", "/data"]
 EXPOSE 1883 8883 9001
 
 COPY docker-entrypoint.sh /
