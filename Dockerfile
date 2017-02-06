@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
 # add user and group first so their IDs don't change
 RUN addgroup mosquitto && adduser -G mosquitto -D -H mosquitto
