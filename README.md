@@ -1,3 +1,9 @@
+# Supported tags and respective `Dockerfile` links
+
+- `latest`, `1`, `1.4`, `1.4.10` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
+
+- `1.4.8` [(Dockerfile)](https://github.com/machine-data/docker-node-red/blob/v1.4.8-r2/Dockerfile)
+
 # Mosquitto on Docker
 
 This repository holds a build definition and supporting files for building a Docker image to run [Mosquitto](https://mosquitto.org).
@@ -106,7 +112,7 @@ Mosquitto was written by Roger Light roger@atchoo.org and is [dual licensed](htt
 Copyright (c) 2007, Eclipse Foundation, Inc. and its licensors.
 
 docker-mosquitto is licensed under the [Apache 2.0 license](https://github.com/machine-data/mosquitto/blob/master/LICENSE), was created by [Jodok Batlogg](https://github.com/jodok).
-Copyright 2016 [Crate.io, Inc.](https://crate.io).
+Copyright 2016-2017 [Crate.io, Inc.](https://crate.io).
 
 ## Contributing
 
