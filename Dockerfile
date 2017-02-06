@@ -6,7 +6,7 @@ RUN addgroup mosquitto && adduser -G mosquitto -D -H mosquitto
 # su/sudo with proper signaling inside docker
 RUN apk add --no-cache su-exec
 
-ENV MOSQUITTO_VERSION="1.4.10"
+ENV MOSQUITTO_VERSION="1.4.10-r2"
 RUN set -xe \
     && apk add --no-cache --virtual .mosquitto \
         mosquitto=${MOSQUITTO_VERSION} \
