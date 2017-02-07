@@ -76,7 +76,7 @@ It is very easy to configure Mosquitto via environment variables. If no config f
 
 - `MOSQUITTO_PERSISTENCE`: Save persistent message data to disk (true/false). Default: true
 
-- `MOSQUITTO_PERSISTENCE_LOCATION`: The directory where the in-memory database is being saved. This translates to `persistence_location` in `mosquitto.conf`. In most cases it makes sense to keep the `/data` default.
+- `MOSQUITTO_PERSISTENCE_LOCATION`: The directory where the in-memory database is being saved. This translates to `persistence_location` in `mosquitto.conf`. In most cases it makes sense to keep the `/data/` default. **NOTE:** Must end in trailing slash.
 
 ## Configuration file
 
@@ -87,7 +87,7 @@ If a config file (or the entire /config directory) is mounted (preferably read-o
 $ curl -O https://raw.githubusercontent.com/eclipse/mosquitto/master/mosquitto.conf
 $ sed -e "s#log_dest syslog#log_dest stdout#" \
       -e "s#\#persistence false#persistence true#" \
-      -e "s#\#persistence_location#persistence_location /data#" \
+      -e "s#\#persistence_location#persistence_location /data/#" \
 
 $ docker run -d \
              -v $(pwd)/mosquitto.conf:/config/mosquitto.conf:ro \
